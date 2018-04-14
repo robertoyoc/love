@@ -1,0 +1,172 @@
+
+
+    <!-- begin MAIN PAGE CONTENT -->
+        <div id="page-wrapper">
+
+            <div class="page-content">
+
+                <!-- begin PAGE TITLE AREA -->
+                <!-- Use this section for each page's title and breadcrumb layout. In this example a date range picker is included within the breadcrumb. -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title">
+                            <h1>Inicio
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li class="active"><i class="fa fa-dashboard"></i> Pagina principal</li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <!-- end PAGE TITLE AREA -->
+
+                <!-- begin DASHBOARD CIRCLE TILES -->
+                <div class="row">
+        
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a href="#">
+                                <div class="circle-tile-heading orange">
+                                    <i class="fa fa-bell fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content orange">
+                                <div class="circle-tile-description text-faded">
+                                    Notificaciones
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    1 Nueva
+                                </div>
+                                <a href="#" class="circle-tile-footer">Más información <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="circle-tile">
+                            <a href="#">
+                                <div class="circle-tile-heading blue">
+                                    <i class="fa fa-tasks fa-fw fa-3x"></i>
+                                </div>
+                            </a>
+                            <div class="circle-tile-content blue">
+                                <div class="circle-tile-description text-faded">
+                                    Tareas
+                                </div>
+                                <div class="circle-tile-number text-faded">
+                                    3
+                                    <span id="sparklineB"></span>
+                                </div>
+                                <a href="#" class="circle-tile-footer">Más información <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- end DASHBOARD CIRCLE TILES -->
+
+                <div class="page-content">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <div class="tile tile-img tile-time" style="height: 200px">
+                            <p class="time-widget">
+                                <span class="time-widget-heading">Fecha</span>
+                                <br>
+                                <strong>
+                                    <span id="datetime"></span>
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="tile dark-blue checklist-tile" style="height: 370px">
+                            <h4><i class="fa fa-check-square-o"></i> Lista de Tareas</h4>
+                             <div class="checklist">
+                                <label class="selected">
+                                    <input type="checkbox" checked> <i class="fa fa-plus-square fa-fw text-faded"></i> Evento Hairspray
+                                    <span class="task-time text-faded pull-right">21 y 22 de marzo</span>
+                                </label>
+                                <label class="selected">
+                                    <input type="checkbox" checked> <i class="fa fa-plus-square fa-fw text-faded"></i> Publicación de semana santa
+                                    <span class="task-time text-faded pull-right"> 26 - 30 de marzo</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked> <i class="fa fa-clock-o"></i> Junta con alumnas de desarrollo de I love Me
+                                    <span class="task-time text-faded pull-right">Martes 10 de abril 10:30 AM</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox"> <i class="fa fa-plus-square"></i> Incluir publicidad de cuida tu salud
+                                    <span class="task-time text-faded pull-right">Miercoles 11 de abril</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox"> <i class="fa fa-clock-o"></i> Planear evento de nutrición
+                                    <span class="task-time text-faded pull-right">Viernes 13 de abril</span>
+                                </label>
+                               </div> 
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="tile orange dash-demo-tile">
+                                    <h4><i class="fa fa-check fa-fw"></i> Alumnos de Profesional</h4>
+                                    <div id="easy-pie-1" class="easy-pie-chart" data-percent="78">
+                                        <span class="percent"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="tile blue dash-demo-tile">
+                                    <h4><i class="fa fa-check fa-fw"></i> Alumnos de Preparatoria</h4>
+                                    <div id="easy-pie-2" class="easy-pie-chart" data-percent="22">
+                                        <span class="percent"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="tile red dash-demo-tile">
+                                    <h4><i class="fa fa-check fa-fw"></i> Alumnos consumen tabaco</h4>
+                                    <div id="easy-pie-2" class="easy-pie-chart" data-percent="57">
+                                        <span class="percent"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="tile green dash-demo-tile">
+                                    <h4><i class="fa fa-check fa-fw"></i> Alumnos consumen alcohol </h4>
+                                    <div id="easy-pie-2" class="easy-pie-chart" data-percent="70">
+                                        <span class="percent"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="tile green" style="height: 320px">
+                                    <h4><i class=""></i> Autoregistro de alumnos <a href="javascript:;"><i class="fa fa-refresh pull-right"></i></a>
+                                    </h4>
+                                    <div id="morris-chart-dashboard"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="tile light-gray" style="height: 320px">
+                                        <h4><i class=""></i> Interacción con App I love Me <br><a href="javascript:;"><i class="fa fa-refresh pull-right"></i></a>
+                                        </h4>
+                                        <div class="flot-chart-content" id="flot-chart-moving-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+{{outlet}}

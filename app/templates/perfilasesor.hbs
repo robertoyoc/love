@@ -1,0 +1,119 @@
+
+
+
+    <div id="page-wrapper">
+
+            <div class="page-content">
+
+                <!-- begin PAGE TITLE ROW -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title">
+                            <h1>
+                                Perfil 
+                                <small>Asesor</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                </li>
+                                <li class="active">Perfil de Asesor</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <!-- end PAGE TITLE ROW -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="portlet portlet-default">
+                            <div class="portlet-body">
+                                <ul id="userTab" class="nav nav-tabs">
+                                    <li class="active"><a href="#overview" data-toggle="tab">Resumen</a>
+                                    </li>
+                                </ul>
+                                <div id="userTabContent" class="tab-content">
+                                    <div class="tab-pane fade in active" id="overview">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-3">
+                                                <img class="img-responsive img-profile" src="img/caro.png" alt="">
+                                                <div class="list-group">
+                                                    <a href="#" class="list-group-item active">Resumen</a>
+                                                    <a href="tablaasesores" class="list-group-item">Regresar</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7 col-md-5">
+                                                <h1>Carolina Jiménez Licona</h1>
+                                                <ul class="list-inline">
+                                                    <li><i class="fa fa-user fa-muted"></i> Enfermera</li>
+                                                    <li><i class="fa fa-group fa-muted"></i> Servicio Médico</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <h3>Detalles del asesor</h3>
+                                                <div>
+                                                 <form role="form">
+                                                            <div class="form-group">
+                                                                <label>Lider</label>
+                                                                <input type="text" class="form-control" value="Enfermera en servicio médico matutino" disabled>
+                                                            </div>
+                                                            <label>Horario de atención</label>
+                                                                <input type="text" class="form-control" value="Lunes a Viernes:" disabled>
+                                                                <br>
+                                                                <div class="input-append bootstrap-timepicker input-group">
+                                                                    <input id="timepicker1" class="form-control" type="text" value="8:00 AM" disabled />
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-default add-on" type="button"><i class="fa fa-clock-o"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="input-append bootstrap-timepicker input-group">
+                                                                    <input id="timepicker1" class="form-control" type="text" value="3:00 AM" disabled/>
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-default add-on" type="button"><i class="fa fa-clock-o"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            
+                                                            <br>
+                                                            <div class="form-group">
+                                                                <label>Teléfono</label>
+                                                                <input type="tel" class="form-control" value="7171847" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Ubicación en campus</label>
+                                                                <input type="text" class="form-control" value="Aulas II" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Correo Electrónico</label>
+                                                                <p><i class="fa fa-envelope-o fa-muted fa-fw"></i>  <a href="#">carolina_jimenez@itesm.mx</a>
+                                                                </p>
+                                                            </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                            
+                            <!-- /.portlet-body -->
+                        </div>
+                        <!-- /.portlet -->
+
+
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+            <!-- /.page-content -->
+		</div>
+
+
+
+
+{{outlet}}

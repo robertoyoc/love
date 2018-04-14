@@ -1,0 +1,161 @@
+
+
+    <div id="page-wrapper">
+
+            <div class="page-content">
+
+                <!-- begin PAGE TITLE ROW -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title">
+                            <h1>
+                                Agregar Asesor
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                </li>
+                                <li class="active">Agregar Asesor</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <!-- end PAGE TITLE ROW -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="portlet portlet-default">
+                            <div class="portlet-body">
+                                <ul id="userTab" class="nav nav-tabs">
+                                    <li><a href="#profile-settings" data-toggle="tab">Agregar Perfil</a>
+                                    </li>
+                                </ul>
+                                <div id="userTabContent" class="tab-content">
+                                    <div class="tab-pane fade in active" id="profile-settings">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <ul id="userSettings" class="nav nav-pills nav-stacked">
+                                                    <li class="active"><a href="#basicInformation" data-toggle="tab"><i class="fa fa-user fa-fw"></i>Información</a>
+                                                    </li>
+                                                    <li><a href="#profilePicture" data-toggle="tab"><i class="fa fa-picture-o fa-fw"></i> Foto de perfil</a>
+                                                    </li>
+                                                    <br>
+                                                    <li><a href="tablaasesores" class="btn btn-info">Ver lista de asesores</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div id="userSettingsContent" class="tab-content">
+                                                    <div class="tab-pane fade in active" id="basicInformation">
+                                                        <form role="form">
+                                                            <h4 class="page-header">Información personal:</h4>
+                                                            <div class="form-group">
+                                                                <label>Profesión</label>
+                                                                <input type="text" class="form-control" value="Dr.">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Nómina</label>
+                                                                <input type="text" class="form-control" value="L00000000">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Nombre</label>
+                                                                <input type="text" class="form-control" value="Alberto">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Apellidos</label>
+                                                                <input type="text" class="form-control" value="Moreno Ortíz">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Área o Departamento</label>
+                                                                    <select name="select" class="form-control" required>
+                                                                        <option value="">Seleccione:</option>
+                                                                        <option>Servicio Médico</option>
+                                                                        <option>Nutrición</option>
+                                                                        <option>Asesoria Psicopedagógica</option>
+                                                                    </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Lider</label>
+                                                                <input type="text" class="form-control" value="Coordinador del área psicopedagogica">
+                                                            </div>
+                                                            <h4 class="page-header">Detalles de contacto</h4>
+                                                            <div class="form-group">
+                                                                <label>Horario de atención</label>
+                                                                <input type="text" class="form-control" value="Lunes a Viernes:">
+                                                                <br>
+                                                                <div class="input-append bootstrap-timepicker input-group">
+                                                                    <input id="timepicker1" class="form-control" type="text" />
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-default add-on" type="button"><i class="fa fa-clock-o"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="input-append bootstrap-timepicker input-group">
+                                                                    <input id="timepicker1" class="form-control" type="text" />
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-default add-on" type="button"><i class="fa fa-clock-o"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Teléfono</label>
+                                                                <input type="tel" class="form-control" value="7171847">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Ubicación en el campus</label>
+                                                                <input type="text" class="form-control" value="Aulas II">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label><i class="fa fa-envelope-o fa-fw"></i> Correo electrónico</label>
+                                                                <input type="email" class="form-control" value="amo@itesm.mx">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-default">Guardar</button>
+                                                            <button class="btn btn-green">Cancelar</button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="profilePicture">
+                                                        <img class="img-responsive img-profile" src="img/doc.png" height="250px" width="250px" alt="">
+                                                        <br>
+                                                        <form role="form">
+                                                            <div class="form-group">
+                                                                <label>Adjuntar nueva imagen</label>
+                                                                <input type="file">
+                                                                <p class="help-block"><i class="fa fa-warning"></i> La imagen debe de ser máximo de 500x500 px. Formatos soportados: JPG, GIF, PNG</p>
+                                                                <button type="submit" class="btn btn-default">Guardar</button>
+                                                                <button class="btn btn-green">Cancelar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.portlet-body -->
+                        </div>
+                        <!-- /.portlet -->
+
+
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.page-content -->
+
+        </div>
+        <!-- /#page-wrapper -->
+        <!-- end MAIN PAGE CONTENT -->
+
+    
+
+
+
+{{outlet}}

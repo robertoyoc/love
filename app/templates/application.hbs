@@ -1,0 +1,348 @@
+
+{{!-- {{#if session.isAuthenticated}} --}}
+    <nav class="navbar-top" role="navigation" >
+
+            <!-- begin BRAND HEADING -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <i class="fa fa-bars"></i> Menu
+                </button>
+            </div>
+            <!-- end BRAND HEADING -->
+
+            <div class="nav-top">
+
+                <!-- begin LEFT SIDE WIDGETS -->
+                <ul class="nav navbar-left">
+                    <li class="tooltip-sidebar-toggle">
+                        <a href="#" id="sidebar-toggle" data-toggle="tooltip" data-placement="right" title="Barra de menú">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <!-- You may add more widgets here using <li> -->
+                </ul>
+
+                <!-- begin MESSAGES/ALERTS/TASKS/USER ACTIONS DROPDOWNS -->
+                <ul class="nav navbar-right">
+                
+                    <!-- begin ALERTS DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="alerts-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell"></i> 
+                            <span class="number">1</span><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-scroll dropdown-alerts">
+
+                            <!-- Alerts Dropdown Heading -->
+                            <li class="dropdown-header">
+                                <i class="fa fa-bell"></i> 1 Notificación nueva
+                            </li>
+
+                            <!-- Alerts Dropdown Body - This is contained within a SlimScroll fixed height box. You can change the height using the SlimScroll jQuery features. -->
+                            <li id="alertScroll">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <div class="alert-icon green pull-left">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </div>
+                                            Nuevos usuarios
+                                            <span class="badge green pull-right">4</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Alerts Dropdown Footer -->
+                            <li class="dropdown-footer">
+                                <a href="#">Ver todas las notificaciones</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end ALERTS DROPDOWN -->
+
+                    <!-- begin TASKS DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="tasks-link dropdown-toggle" data-toggle=dropdown>
+                            <i class="fa fa-tasks"></i> 
+                            <span class=number>3</span><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-scroll dropdown-tasks">
+
+                            <!-- Tasks Dropdown Header -->
+                            <li class="dropdown-header">
+                                <i class="fa fa-tasks"></i> 3 Tareas pendientes
+                            </li>
+
+                            <!-- Tasks Dropdown Body - This is contained within a SlimScroll fixed height box. You can change the height using the SlimScroll jQuery features. -->
+                            <li id="taskScroll">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Junta con alumnas de desarrollo de I love Me
+                                                <br>
+                                                Martes 10 de abril
+                                                <span class="pull-right">
+                                                    <strong>10:30</strong>
+                                                </span>
+                                            </p>
+                                            <!--  <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                            </div> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Incluir publicidad de cuida tu salud 
+                                                <span class="pull-right">
+                                                    <strong>Miercoles 11 de abril</strong>
+                                                </span>
+                                            </p>
+                                            <br>
+                                            <!-- <div class="progress progress-striped">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                            </div> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>
+                                                Planear evento de nutrición
+                                                <span class="pull-right">
+                                                    <strong>Viernes 13 de abril</strong>
+                                                </span>
+                                            </p>
+                                            <!-- <div class="progress progress-striped active">
+                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                            </div> -->
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Tasks Dropdown Footer -->
+                            <li class="dropdown-footer">
+                                <a href="#">Ver todas las tareas</a>
+                            </li>
+
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end TASKS DROPDOWN -->
+
+                    <!-- begin USER ACTIONS DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="perfil">
+                                    <i class="fa fa-user"></i> Mi perfil
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-bell"></i> Notificaciones
+                                    <span class="badge orange pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-tasks"></i> Tareas
+                                    <span class="badge blue pull-right">3</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a {{action 'showModal'}} class="logout_open" href="#logout">
+                                    <i class="fa fa-sign-out"></i> Cerrar Sesión
+                                    <strong>Minerva Granillo</strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-menu -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <!-- end USER ACTIONS DROPDOWN -->
+                </ul>
+                <!-- /.nav -->
+                <!-- end MESSAGES/ALERTS/TASKS/USER ACTIONS DROPDOWNS -->
+            </div>
+            <!-- /.nav-top -->
+    </nav>
+
+    <nav class="navbar-side" role="navigation">
+
+            <div class="navbar-collapse sidebar-collapse collapse">
+                <ul id="side" class="nav navbar-nav side-nav">
+                    <!-- begin SIDE NAV USER PANEL -->
+                    <li class="side-user hidden-xs">
+                        <img class="img-circle" src="img/minerva.jpg" width="150" height="150" alt="">
+                        <p class="welcome">
+                            <i class="fa fa-key"></i> Perfil
+                        </p>
+                        <p class="name tooltip-sidebar-logout">
+                            Minerva
+                            <span class="last-name">Granillo</span>  <a {{action 'showModal'}} style="color: inherit" class="logout_open" href="#logout" data-toggle="tooltip" data-placement="top" title="Cerrar Sesión"><i class="fa fa-sign-out"></i></a>
+                        </p>
+                        <div class="clearfix"></div>
+                    </li>
+                    <!-- end SIDE NAV USER PANEL -->
+                    <!-- begin SIDE NAV SEARCH -->
+                    <li class="nav-search">
+                        <form role="form">
+                            <input type="search" class="form-control" placeholder="Buscar...">
+                            <button class="btn">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <!-- end SIDE NAV SEARCH -->
+                    <!-- begin DASHBOARD LINK -->
+                    <li>
+                        <a class="active" href="principal">
+                            <i class="glyphicon glyphicon-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#alumnos">
+                            <i class="glyphicon glyphicon-user"></i> Alumnos <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="alumnos">
+                            <li>
+                                <a href="tablaalumnos">
+                                    <i class="fa fa-angle-double-right"></i> Lista de alumnos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graficasalumnos">
+                                    <i class="fa fa-angle-double-right"></i> Gráficas informativas
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#areas">
+                            <i class="glyphicon glyphicon-list-alt"></i> Áreas informativas <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="areas">
+                            <li>
+                                <a class="active" href="agregarinformacion">
+                                     <i class="glyphicon glyphicon-plus"></i> Agregar información
+                                </a>
+                             </li>
+                            <li>
+                                <a class="active" href="cuidatusalud">
+                                     <i class="glyphicon glyphicon-heart"></i> Cuida tu salud
+                                </a>
+                             </li>
+                            <li>
+                                <a class="active" href="manejodeltiempo">
+                                    <i class="glyphicon glyphicon-hourglass"></i> Manejo del tiempo
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="motivate">
+                                    <i class="glyphicon glyphicon-option-vertical"></i> Motívate
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="nutricion">
+                                    <i class="glyphicon glyphicon-apple"></i> Nutrición
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="controldesintomas">
+                                    <i class="glyphicon glyphicon-apple"></i> Control de Síntomas
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="cuestionario">
+                                    <i class="glyphicon glyphicon-apple"></i> Descubre tu estado de salud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="active" href="primerosauxilios">
+                                    <i class="glyphicon glyphicon-apple"></i> ¿Sabías qué?
+                                </a>
+                            </li>
+                                </ul>
+                            </li>
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#pages">
+                            <i class="glyphicon glyphicon-user"></i> Asesores <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="pages">
+                            <li>
+                                <a class="active" href="agregarasesor">
+                                     <i class="glyphicon glyphicon-plus"></i> Agregar asesor
+                                </a>
+                             </li>
+                             <li>
+                                <a class="active" href="tablaasesores">
+                                     <i class="fa fa-angle-double-right"></i> Lista de asesores
+                                </a>
+                             </li>
+                        </ul>
+                    </li>
+                    <li class="panel">
+                        <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#calendario">
+                            <i class="glyphicon glyphicon-calendar"></i> Calendario <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="collapse nav" id="calendario">
+                            <li>
+                                <a class="active" href="agregarevento">
+                                     <i class="glyphicon glyphicon-plus"></i> Agregar evento
+                                </a>
+                             </li>
+                             <li>
+                                <a class="active" href="calendarioeventos">
+                                     <i class="fa fa-angle-double-right"></i> Ver calendario
+                                </a>
+                             </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+{{!--     {{/if}} --}}
+
+{{outlet}}
+{{!-- 
+{{#if session.isAuthenticated}} --}}
+
+<div id="logout" style="display:none">
+        <div class="logout-message">
+            <img class="img-circle img-logout" src="img/minerva.jpg" width="115px" height="115px" alt="">
+            <h3>
+                <i class="fa fa-sign-out text-green"></i> ¿Deseas cerrar sesión?
+            </h3>
+            <p>Selecciona "Cerrar Sesión" si estas listo.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="loginn" class="btn btn-green">
+                        <strong>Cerrar Sesión</strong>
+                    </a>
+                </li>
+                <li>
+                    <button class="logout_close btn btn-green">Cancelar</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+{{!--     {{/if}} --}}
+    <!-- THEME SCRIPTS -->
+    <script src="js/flex.js"></script>
+    
+    <script src="js/demo/advanced-form-demo.js"></script>
+    <script src="js/demo/calendar-demo.js"></script>
+    <script src="js/demo/advanced-tables-demo.js"></script>
+    <script src="js/demo/dashboard-demo.js"></script>
+
+
