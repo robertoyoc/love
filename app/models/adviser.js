@@ -1,20 +1,20 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	profesion: DS.attr('string'),
-  	nomina:  DS.attr('string'),
-  	nombre: DS.attr('string'),
-  	apellidos:  DS.attr('string'),
-  	departamento: DS.attr('string'),
-  	lider:  DS.attr('string'),
-  	atencion: DS.attr('string'),
-  	horainicio:  DS.attr('string'),
-  	horafin: DS.attr('string'),
-  	telefono: DS.attr('string'),
-  	ubicacion:  DS.attr('string'),
-  	email: DS.attr('string'),
+  profesion: DS.attr('string'),
+    nomina:  DS.attr('string'),
+    nombre: DS.attr('string'),
+    apellidos:  DS.attr('string'),
+    departamento: DS.attr('string'),
+    lider:  DS.attr('string'),
+    telefono: DS.attr('number'),
+    ubicacion:  DS.attr('string'),
+    horarioInit:  DS.attr('string', {defaultValue: "9:00 AM"}),
+    horarioEnd:  DS.attr('string', {defaultValue: "2:00 PM"}),
+    email: DS.attr('string'),
+    pass: "",
 
-  	imgUrl: DS.attr('string')
+    foto: DS.attr('string'),
 
     
 });

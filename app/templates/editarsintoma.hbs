@@ -11,7 +11,7 @@
                                 Editar síntoma
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i> {{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Editar Síntoma</li>
                             </ol>
@@ -47,14 +47,14 @@
                                                             <h4 class="page-header">Editar información del síntoma:</h4>
                                                             <div class="form-group">
                                                                 <label>Nombre actual del síntoma:</label>
-                                                                <input type="text" class="form-control" value="alegria" disabled>
+                                                                {{input type="text" class="form-control" value=model.nombre disabled=true}}
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Nuevo nombre del síntoma:</label>
-                                                                <input type="text" class="form-control" value="alegria">
+                                                                {{input type="text" class="form-control" value=newName}}
                                                             </div>
-                                                            <button type="submit" class="btn btn-default">Guardar</button>
-                                                            <button class="btn btn-green">Cancelar</button>
+                                                            <button {{action 'save' model newName}}type="submit" class="btn btn-default">Guardar</button>
+                                                            {{#link-to "controldesintomas" class="btn btn-green"}}Cancelar{{/link-to}}
                                                         </form>
                                                     </div>
                                                 </div>
@@ -81,3 +81,17 @@
         </div>
 
 {{outlet}}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+
+    <script src="/js/flex.js"></script>
+    
+<script src="/js/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>

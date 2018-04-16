@@ -11,7 +11,7 @@
                                 Editar Cuestionario
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i> {{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Editar Pregunta</li>
                             </ol>
@@ -28,7 +28,7 @@
                         <div class="portlet portlet-default">
                             <div class="portlet-body">
                                 <ul id="userTab" class="nav nav-tabs">
-                                    <li><a href="#profile-settings" data-toggle="tab">Editar Pregunta</a>
+                                    <li class="active"><a href="#profile-settings" data-toggle="tab">Editar Pregunta</a>
                                     </li>
                                 </ul>
                                 <div id="userTabContent" class="tab-content">
@@ -47,59 +47,59 @@
                                                             <h4 class="page-header">Editar información de la pregunta:</h4>
                                                             <div class="form-group">
                                                                 <label>Pregunta actual:</label>
-                                                                <input type="text" class="form-control" value="1. ¿Cuántos días a la semana desayunas?" disabled>
+                                                                {{input type="text" class="form-control" value=model.pregunta disabled=true}}
                                                                 <br>
                                                                 <label>Respuestas:</label>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>7 días
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>{{model.respuesta1}}
                                                                     </label>
                                                                 </div>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>4 a 6 días
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>{{model.respuesta2}}
                                                                     </label>
                                                                 </div>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>1 a 3 días
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>{{model.respuesta3}}
                                                                     </label>
                                                                 </div>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>No desayuno
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="" disabled>{{model.respuesta4}}
                                                                     </label>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Nueva pregunta:</label>
-                                                                <input type="text" class="form-control" value="1. ¿Cuántos días a la semana haces ejercicio?">
+                                                                {{input type="text" class="form-control" value=newPregunta}}
                                                                 <br>
                                                                 <label>Respuestas:</label>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">7 días
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">{{input type="text" class="form-control" value=R1}}
                                                                     </label>
                                                                 </div>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">4 a 6 días
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">{{input type="text" class="form-control" value=R2}}
                                                                     </label>
                                                                 </div>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">1 a 3 días
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">{{input type="text" class="form-control" value=R3}}
                                                                     </label>
                                                                 </div>
                                                                 <div class="radio">
                                                                     <label>
-                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">No hago ejercicio
+                                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="">{{input type="text" class="form-control" value=R4}}
                                                                     </label>
                                                                 </div>
                                                             </div>
 
-                                                            <button type="submit" class="btn btn-default">Guardar</button>
-                                                            <button class="btn btn-green">Cancelar</button>
+                                                            <button {{action 'save' model newPregunta R1 R2 R3 R4}} type="submit" class="btn btn-default">Guardar</button>
+                                                            {{#link-to 'cuestionario' class="btn btn-green"}}Cancelar{{/link-to}}
                                                         </form>
                                                     </div>
                                                 </div>
@@ -126,3 +126,17 @@
         </div>
 
 {{outlet}}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+
+    <script src="/js/flex.js"></script>
+    
+<script src="/js/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>

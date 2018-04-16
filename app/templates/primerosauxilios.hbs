@@ -10,7 +10,7 @@
                             <h1>Registro de Primeros Auxilios
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i> {{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Lista de primeros Auxilios</li>
                             </ol>
@@ -43,46 +43,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{#each model as |pr|}}
                                             <tr class="odd gradeX">
-                                                <td>Alergias</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
+                                                <td>{{pr.nombre}}</td>
+                                                <td class="center">{{#link-to "editarprimerosauxilios" pr.id class="btn btn-info"}}Editar{{/link-to}}</td>
                                             </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Ataques de Ansiedad</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Crisis Asmática</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Diabetes</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Envenenamiento/Sustancias Peligrosas</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Golpe de Calor</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Hiportermia</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Picaduras/Moderduras</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Sangrado</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Tocerduras y Esguinces</td>
-                                                <td class="center"><a href="editarprimerosauxilios" class="btn btn-info">Editar</a></td>
-                                            </tr> 
+                                            {{/each}}
                                         </tbody>
                                     </table>
                                 </div>
@@ -104,3 +70,17 @@
         </div>
 
 {{outlet}}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+
+    <script src="/js/flex.js"></script>
+    
+<script src="/js/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>

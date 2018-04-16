@@ -10,7 +10,7 @@
                             <h1>Manejo del tiempo
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i>  {{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Manejo del tiempo</li>
                             </ol>
@@ -34,14 +34,16 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="portlet-body">
-                                <div class="form-group">
+                                {{#each publicaciones as |publicacion|}}
+                                 <div class="form-group">
                                     <label>Nombre de la publicación</label>
-                                    <input type="text" class="form-control" value="5 tips" disabled>
+                                    {{input type="text" class="form-control" value=publicacion.nombre disabled=true}}
                                     <br>
-                                    <img class="img-responsive img-profile" src="img/majo.png" alt="">
-                                    <a href="editarinformacion" class="btn btn-info">Editar Publicación</a>
-                                    <button class="btn btn-green">Eliminar Publicación</button>
+                                    <img class="img-responsive img-profile" src="{{or publicacion.imgUrl "https://support.kickofflabs.com/wp-content/uploads/2016/06/800x1200.png"}}" alt="">
+                                    {{#link-to "editarinformacion" publicacion.id class="btn btn-info"}}Editar Publicación{{/link-to}}
+                                    <button {{action 'delete' publicacion}} class="btn btn-green">Eliminar Publicación</button>
                                 </div>
+                                {{/each}}
                             </div>
                             <!-- /.portlet-body -->
                         </div>
@@ -60,3 +62,13 @@
 
 
 {{outlet}}
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+    <script src="js/flex.js"></script>
+<script src="js/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>

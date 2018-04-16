@@ -162,7 +162,7 @@
                             <li>
                                 <a {{action 'showModal'}} class="logout_open" href="#logout">
                                     <i class="fa fa-sign-out"></i> Cerrar Sesión
-                                    <strong>Minerva Granillo</strong>
+                                    <strong>{{currentUser.nombre}}</strong>
                                 </a>
                             </li>
                         </ul>
@@ -183,13 +183,13 @@
                 <ul id="side" class="nav navbar-nav side-nav">
                     <!-- begin SIDE NAV USER PANEL -->
                     <li class="side-user hidden-xs">
-                        <img class="img-circle" src="img/minerva.jpg" width="150" height="150" alt="">
+                        <img class="img-circle" src="{{or currentUser.foto "https://www.teksteshqip.com/img_upz/allart_full/63351.jpg"}}" width="150" height="150" alt="">
                         <p class="welcome">
                             <i class="fa fa-key"></i> Perfil
                         </p>
                         <p class="name tooltip-sidebar-logout">
-                            Minerva
-                            <span class="last-name">Granillo</span>  <a {{action 'showModal'}} style="color: inherit" class="logout_open" href="#logout" data-toggle="tooltip" data-placement="top" title="Cerrar Sesión"><i class="fa fa-sign-out"></i></a>
+                            {{currentUser.nombre}}
+                            <span class="last-name"> {{currentUser.apellidos}}</span>  <a {{action 'showModal'}} style="color: inherit" class="logout_open" href="#logout" data-toggle="tooltip" data-placement="top" title="Cerrar Sesión"><i class="fa fa-sign-out"></i></a>
                         </p>
                         <div class="clearfix"></div>
                     </li>
@@ -319,7 +319,7 @@
 
 <div id="logout" style="display:none">
         <div class="logout-message">
-            <img class="img-circle img-logout" src="img/minerva.jpg" width="115px" height="115px" alt="">
+            <img class="img-circle img-logout" src="{{or currentUser.foto "https://www.teksteshqip.com/img_upz/allart_full/63351.jpg"}}" width="115px" height="115px" alt="">
             <h3>
                 <i class="fa fa-sign-out text-green"></i> ¿Deseas cerrar sesión?
             </h3>
@@ -338,11 +338,23 @@
     </div>
     {{/if}}
     <!-- THEME SCRIPTS -->
-    <script src="js/flex.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+     <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+    <script src="/js/flex.js"></script>
+
     
-    <script src="js/demo/advanced-form-demo.js"></script>
-    <script src="js/demo/calendar-demo.js"></script>
-    <script src="js/demo/advanced-tables-demo.js"></script>
-    <script src="js/demo/dashboard-demo.js"></script>
 
 

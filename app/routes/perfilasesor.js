@@ -1,7 +1,6 @@
 import Ember from 'ember';
+import AuthenticatedUser from '../mixins/authenticated-user';
 
-export default Ember.Route.extend({
-	model(params){
-		return this.store.findRecord('admin', params.admin_id)
-	}
+
+export default Ember.Route.extend(AuthenticatedUser, {
 });

@@ -10,7 +10,7 @@
                             <h1>Detalle de Eventos
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i>   {{#link-to "principal"}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Detalle de Eventos</li>
                             </ol>
@@ -36,11 +36,11 @@
                             <div class="portlet-body">
                                  <div class="form-group">
                                     <label>Nombre del evento</label>
-                                    <input type="text" class="form-control" value="Hairspray" disabled>
+                                    {{input type="text" class="form-control" value=model.nombre disabled=true}}
                                     <br>
-                                    <img class="img-responsive img-profile" src="img/hairspray.jpg" alt="">
-                                    <a href="editarevento" class="btn btn-info">Editar Publicación</a>
-                                    <button class="btn btn-green">Eliminar Publicación</button>
+                                    <img class="img-responsive img-profile" src="{{or model.imgUrl "https://support.kickofflabs.com/wp-content/uploads/2016/06/800x1200.png"}}" alt="">
+                                    {{#link-to "editarevento" model.id class="btn btn-info"}}Editar Publicación{{/link-to}}
+                                    <button {{action 'delete' model}} class="btn btn-green">Eliminar Publicación</button>
                                 </div>
                             </div>
                             <!-- /.portlet-body -->
@@ -63,3 +63,13 @@
 
 
 {{outlet}}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+    <script src="/js/flex.js"></script>

@@ -53,11 +53,11 @@ $(function() {
 //Tooltips
 $(function() {
 
-    // Tooltips for sidebar toggle and sidebar logout button
-    $('.tooltip-sidebar-toggle, .tooltip-sidebar-logout').tooltip({
-        selector: "[data-toggle=tooltip]",
-        container: "body"
-    })
+    //Tooltips for sidebar toggle and sidebar logout button
+    // $('.tooltip-sidebar-toggle, .tooltip-sidebar-logout').tooltip({
+    //     selector: "[data-toggle=tooltip]",
+    //     container: "body"
+    // })
 
 })
 

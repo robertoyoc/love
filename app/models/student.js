@@ -6,7 +6,7 @@ export default DS.Model.extend({
   	apellidoP:  DS.attr('string'),
   	apellidoM: DS.attr('string'),
   	sexo:  DS.attr('string'),
-  	edad: DS.attr('string'),
+  	edad: DS.attr('number'),
   	nivel:  DS.attr('string'),
   	calcohol: DS.attr('string'),
   	ctabaco: DS.attr('string'),

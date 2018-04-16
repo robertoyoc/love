@@ -12,6 +12,7 @@ export default Ember.Controller.extend({
 			}).then(()=>{
 				this.transitionToRoute('principal')
 			}).catch((error)=>{
+
 				console.log(error)
 				alert("Claves de acceso incorrectas")
 			})

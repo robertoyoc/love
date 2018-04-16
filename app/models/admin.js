@@ -15,6 +15,7 @@ export default DS.Model.extend({
     pass: "",
 
   	foto: DS.attr('string'),
+    uid: DS.attr('string'),
 
     Advisers: DS.hasMany('adviser')
 

@@ -12,7 +12,7 @@
                             <h1>Lista de Alumnos
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i>{{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Tabla de alumnos</li>
                             </ol>
@@ -48,104 +48,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{#each model as |alumno|}}
                                             <tr class="odd gradeX">
-                                                <td>Erika Moctezuma Razo</td>
-                                                <td>Femenino</td>
-                                                <td>22</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
+                                                <td>{{alumno.nombre}} {{alumno.apellidoP}} {{alumno.apellidoM}}</td>
+                                                <td>{{alumno.sexo}}</td>
+                                                <td>{{alumno.edad}}</td>
+                                                <td>{{alumno.nivel}}</td>
+                                                <td class="center">{{#link-to "perfilalumno" alumno.id class="btn btn-info"}}Ver más{{/link-to}}</td>
                                             </tr>
-                                            <tr class="even gradeC">
-                                                <td>Erika del Rocio Martínez Aparicio</td>
-                                                <td>Femenino</td>
-                                                <td>24</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Ximena Armenta Monroy</td>
-                                                <td>Femenino</td>
-                                                <td>16</td>
-                                                <td>Preparatoria</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Sebastian Camacho</td>
-                                                <td>Masculino</td>
-                                                <td>18</td>
-                                                <td>Preparatoria</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Alain Martínez Flores</td>
-                                                <td>Masculino</td>
-                                                <td>22</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Alan Arturo Islas Reyes</td>
-                                                <td>Masculino</td>
-                                                <td>22</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Guillermo Villegas Partido</td>
-                                                <td>Masculino</td>
-                                                <td>21</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Valeria Sofía Martínez Aparicio</td>
-                                                <td>Femenino</td>
-                                                <td>20</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Brenda Meneses Quintero</td>
-                                                <td>Femenino</td>
-                                                <td>21</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Nadia Juelita Naciff</td>
-                                                <td>Femenino</td>
-                                                <td>21</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Alma Karolina Barrera Rodríguez</td>
-                                                <td>Femenino</td>
-                                                <td>21</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Roberto Carlos Yoc</td>
-                                                <td>Masculino</td>
-                                                <td>20</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Gustavo Partido Maciel</td>
-                                                <td>Masculino</td>
-                                                <td>25</td>
-                                                <td>Profesional</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Emiliano Cruz Ramírez</td>
-                                                <td>Masculino</td>
-                                                <td>17</td>
-                                                <td>Preparatoria</td>
-                                                <td class="center"><a href="perfilalumno" class="btn btn-info">Ver más</a></td>
-                                            </tr>
+                                            {{/each}}
 
                                             
                                         </tbody>
@@ -172,3 +83,20 @@
 
 
 {{outlet}}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+    <script src="js/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="js/plugins/datatables/datatables-bs3.js"></script>
+
+
+
+    <script src="/js/flex.js"></script>
+    <script src="/js/demo/advanced-tables-demo.js"></script>
+    
+<script src="/js/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>

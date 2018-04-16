@@ -12,7 +12,7 @@
                             <h1>Registro de Cuestionario
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i> {{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Lista de preguntas</li>
                             </ol>
@@ -45,22 +45,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{#each model as |pregunta index|}}
                                             <tr class="odd gradeX">
-                                                <td>1. ¿Cuántos días a la semana desayunas?</td>
-                                                <td class="center"><a href="editarcuestionario" class="btn btn-info">Editar</a></td>
+                                                <td>{{index}}. {{pregunta.pregunta}}</td>
+                                                <td class="center">{{#link-to "editarcuestionario" pregunta.id class="btn btn-info"}}Editar{{/link-to}}</td>
                                             </tr>
-                                            <tr class="odd gradeX">
-                                                <td>2. ¿Cuántos vasos de agua tomas al día?</td>
-                                                <td class="center"><a href="editarcuestionario" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>3. ¿Cuántas comidas tienes al día?</td>
-                                                <td class="center"><a href="editarcuestionario" class="btn btn-info">Editar</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>4. ¿Cuántas horas duermes al dia?</td>
-                                                <td class="center"><a href="editarcuestionario" class="btn btn-info">Editar</a></td>
-                                            </tr>
+                                            {{/each}}
                                             
                                         </tbody>
                                     </table>
@@ -84,3 +74,17 @@
 
 
 {{outlet}}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+
+    <script src="/js/flex.js"></script>
+    
+<script src="/js/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>

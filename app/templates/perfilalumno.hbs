@@ -14,7 +14,7 @@
                                 <small>Alumno</small>
                             </h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="principal">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i> {{#link-to 'principal'}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Perfil del alumno</li>
                             </ol>
@@ -38,46 +38,46 @@
                                     <div class="tab-pane fade in active" id="overview">
                                         <div class="row">
                                             <div class="col-lg-2 col-md-3">
-                                                <img class="img-responsive img-profile" src="img/cur.jpg" alt="">
+                                                <img class="img-responsive img-profile" src="{{or model.foto "https://www.teksteshqip.com/img_upz/allart_full/63351.jpg"}}" alt="">
                                                 <div class="list-group">
                                                     <a href="#" class="list-group-item active">Resumen</a>
-                                                    <a href="tablaalumnos" class="list-group-item">Regresar</a>
+                                                    {{#link-to "tablaalumnos" class="list-group-item"}}Regresar{{/link-to}}
                                                 </div>
                                             </div>
                                             <div class="col-lg-7 col-md-5">
-                                                <h1>Erika Moctezuma Razo</h1>
+                                                <h1>{{model.nombre}} {{model.apellidoP}} {{model.apellidoM}}</h1>
                                                 <ul class="list-inline">
-                                                    <li><i class="fa fa-user fa-muted"></i> Femenino</li>
-                                                    <li><i class="">Edad</i> 22</li>
-                                                    <li><i class="fa fa-group fa-muted"></i> Profesional</li>
+                                                    <li><i class="fa fa-user fa-muted"></i> {{model.sexo}}</li>
+                                                    <li><i class="">Edad</i> {{model.edad}}</li>
+                                                    <li><i class="fa fa-group fa-muted"></i> {{model.nivel}}</li>
                                                 </ul>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <h3>Detalles del alumno</h3>
                                                  <form role="form">
                                                             <div class="form-group">
-                                                                <label>Matricula</label>
-                                                                <input type="text" class="form-control" value="A01270808" disabled>
+                                                                <label>Matrícula</label>
+                                                                {{input type="text" class="form-control" value=model.matricula disabled=true}}
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Consumo de alcohol</label>
-                                                                <input type="text" class="form-control" value="A veces" disabled>
+                                                                {{input type="text" class="form-control" value=model.calcohol disabled=true}}
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Consumo de tabaco</label>
-                                                                <input type="text" class="form-control" value="No" disabled>
+                                                                {{input type="text" class="form-control" value=model.ctabaco disabled=true}}
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Enfermedad crónica</label>
-                                                                <input type="text" class="form-control" value="No" disabled>
+                                                                {{input type="text" class="form-control" value=model.enfermedad disabled=true}}
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Ha tenido o actualmente tiene ayuda psicológica </label>
-                                                                <input type="text" class="form-control" value="No" disabled>
+                                                                {{input type="text" class="form-control" value=model.apsicologica disabled=true}}
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Correo Electrónico</label>
-                                                                <p><i class="fa fa-envelope-o fa-muted fa-fw"></i>  <a href="#">a01270808@itesm.mx</a>
+                                                                <p><i class="fa fa-envelope-o fa-muted fa-fw"></i>  <a href="#">{{model.email}}</a>
                                                                 </p>
                                                             </div>
                                                 </form>
@@ -103,3 +103,13 @@
 
 
 {{outlet}}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+
+
+    <script src="/js/flex.js"></script>

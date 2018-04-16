@@ -4,6 +4,6 @@ import AuthenticatedUser from '../mixins/authenticated-user';
 
 export default Ember.Route.extend(AuthenticatedUser, {
 	model(){
-		return this.store.findAll('admin')
+		return this.store.findAll('adviser')
 	}
 });

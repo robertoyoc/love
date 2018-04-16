@@ -11,7 +11,7 @@
                         <div class="page-title">
                             <h1>Calendario de Eventos</h1>
                             <ol class="breadcrumb">
-                                <li><i class="fa fa-dashboard"></i>  <a href="index">Inicio</a>
+                                <li><i class="fa fa-dashboard"></i>  {{#link-to "principal"}}Inicio{{/link-to}}
                                 </li>
                                 <li class="active">Calendario de Eventos</li>
                             </ol>
@@ -53,18 +53,22 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{#each model as |evento|}}
+                                            {{#unless evento.isNew}}
                                             <tr class="odd gradeX">
                                                 <td>                            
                                                     <div class="portlet-body">
                                                     <div id='external-events'>
                                                         <div>
-                                                        <div class='external-event'>Hairspray</div>
+                                                        <div class='external-event'>{{evento.nombre}}</div>
                                                         </div>
                                                     </div>
                                                     </div>
                                                 </td>
-                                                <td class="center"><a href="detalleeventos" class="btn btn-info btn-sm">Ver evento</a></td>
+                                                <td class="center">{{#link-to "detalleeventos" evento.id class="btn btn-info btn-sm"}}Ver evento{{/link-to}}</td>
                                             </tr>
+                                            {{/unless}}
+                                            {{/each}}
                                         </tbody>
                                     </table>
                                     </div>
@@ -84,3 +88,21 @@
 
 
 {{outlet}}
+ <script src="js/plugins/fullcalendar/jquery-ui.custom.min.js"></script>
+
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/hisrc/hisrc.js"></script>
+    <script src="/js/plugins/popupoverlay/jquery.popupoverlay.js"></script>
+    <script src="/js/plugins/popupoverlay/defaults.js"></script>
+
+    <script src="/js/plugins/popupoverlay/logout.js"></script>
+    <script src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+    <!-- HISRC Retina Images -->
+
+    <!-- PAGE LEVEL PLUGIN SCRIPTS -->
+
+    <!-- THEME SCRIPTS -->
+    <script src="js/flex.js"></script>
+    <script src="js/demo/calendar-demo.js"></script>
+
