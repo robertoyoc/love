@@ -47,36 +47,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{#each model as |asesor|}}
+                                            {{#unless asesor.isNew}}
                                             <tr class="odd gradeX">
-                                                <td>Dr.</td>
-                                                <td>Francisco Javier Larios Meza</td>
-                                                <td>Asesoría Psicopedagógica</td>
-                                                <td class="center"><a href="perfilasesor" class="btn btn-info">Ver más</a></td>
+                                                <td>{{asesor.profesion}}</td>
+                                                <td>{{asesor.nombre}} {{asesor.apellidos}}</td>
+                                                <td>{{asesor.departamento}}</td>
+                                                <td class="center">{{#link-to "perfilasesor" asesor}}Ver más{{/link-to}}</td>
                                             </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Dr.</td>
-                                                <td>Alberto Moreno Ortíz</td>
-                                                <td>Servicio Médico</td>
-                                                <td class="center"><a href="perfilasesor" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Enfermera</td>
-                                                <td>Carolina Jiménez Licona</td>
-                                                <td>Servicio Médico</td>
-                                                <td class="center"><a href="perfilasesor" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Dr.</td>
-                                                <td>Roberto Islas Samperio</td>
-                                                <td>Servicio Médico</td>
-                                                <td class="center"><a href="perfilasesor" class="btn btn-info">Ver más</a></td>
-                                            </tr>
-                                            <tr class="odd gradeX">
-                                                <td>Lic.</td>
-                                                <td>Nutriologa</td>
-                                                <td>Nutrición</td>
-                                                <td class="center"><a href="perfilasesor" class="btn btn-info">Ver más</a></td>
-                                            </tr>
+                                            {{/unless}}
+                                            {{/each}}
                                         </tbody>
                                     </table>
                                 </div>
@@ -100,3 +80,4 @@
 
 
 {{outlet}}
+    <script src="js/flex.js"></script>

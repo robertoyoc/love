@@ -8,11 +8,13 @@ export default DS.Model.extend({
   	departamento: DS.attr('string'),
   	lider:  DS.attr('string'),
   	telefono: DS.attr('number'),
-  	ubicacion:  DS.attr('string'),
-  	email: DS.attr('email'),
+    ubicacion:  DS.attr('string'),
+    horarioInit:  DS.attr('string', {defaultValue: "9:00 AM"}),
+  	horarioEnd:  DS.attr('string', {defaultValue: "2:00 PM"}),
+  	email: DS.attr('string'),
     pass: "",
 
-  	foto: DS.attr('image.url'),
+  	foto: DS.attr('string'),
 
     Advisers: DS.hasMany('adviser')
 

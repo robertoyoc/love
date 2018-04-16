@@ -1,5 +1,5 @@
 
-{{!-- {{#if session.isAuthenticated}} --}}
+{{#if session.isAuthenticated}}
     <nav class="navbar-top" role="navigation" >
 
             <!-- begin BRAND HEADING -->
@@ -206,9 +206,9 @@
                     <!-- end SIDE NAV SEARCH -->
                     <!-- begin DASHBOARD LINK -->
                     <li>
-                        <a class="active" href="principal">
+                        {{#link-to 'principal'}}
                             <i class="glyphicon glyphicon-home"></i> Inicio
-                        </a>
+                        {{/link-to}}
                     </li>
                     <li class="panel">
                         <a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#alumnos">
@@ -216,14 +216,14 @@
                         </a>
                         <ul class="collapse nav" id="alumnos">
                             <li>
-                                <a href="tablaalumnos">
+                                {{#link-to 'tablaalumnos'}}
                                     <i class="fa fa-angle-double-right"></i> Lista de alumnos
-                                </a>
+                                {{/link-to}}
                             </li>
                             <li>
-                                <a href="graficasalumnos">
+                                {{#link-to "graficasalumnos"}}
                                     <i class="fa fa-angle-double-right"></i> Gráficas informativas
-                                </a>
+                                {{/link-to}}
                             </li>
                         </ul>
                     </li>
@@ -233,44 +233,44 @@
                         </a>
                         <ul class="collapse nav" id="areas">
                             <li>
-                                <a class="active" href="agregarinformacion">
+                                {{#link-to "agregarinformacion"}}
                                      <i class="glyphicon glyphicon-plus"></i> Agregar información
-                                </a>
+                                {{/link-to}}
                              </li>
                             <li>
-                                <a class="active" href="cuidatusalud">
+                                {{#link-to "cuidatusalud"}}
                                      <i class="glyphicon glyphicon-heart"></i> Cuida tu salud
-                                </a>
+                                {{/link-to}}
                              </li>
                             <li>
-                                <a class="active" href="manejodeltiempo">
+                                {{#link-to "manejodeltiempo"}}
                                     <i class="glyphicon glyphicon-hourglass"></i> Manejo del tiempo
-                                </a>
+                                {{/link-to}}
                             </li>
                             <li>
-                                <a class="active" href="motivate">
+                                {{#link-to "motivate"}}
                                     <i class="glyphicon glyphicon-option-vertical"></i> Motívate
-                                </a>
+                                {{/link-to}}
                             </li>
                             <li>
-                                <a class="active" href="nutricion">
+                                {{#link-to "nutricion"}}
                                     <i class="glyphicon glyphicon-apple"></i> Nutrición
-                                </a>
+                                {{/link-to}}
                             </li>
                             <li>
-                                <a class="active" href="controldesintomas">
+                                {{#link-to "controldesintomas"}}
                                     <i class="glyphicon glyphicon-apple"></i> Control de Síntomas
-                                </a>
+                                {{/link-to}}
                             </li>
                             <li>
-                                <a class="active" href="cuestionario">
+                                {{#link-to "cuestionario"}}
                                     <i class="glyphicon glyphicon-apple"></i> Descubre tu estado de salud
-                                </a>
+                                {{/link-to}}
                             </li>
                             <li>
-                                <a class="active" href="primerosauxilios">
+                                {{#link-to "primerosauxilios"}}
                                     <i class="glyphicon glyphicon-apple"></i> ¿Sabías qué?
-                                </a>
+                                {{/link-to}}
                             </li>
                                 </ul>
                             </li>
@@ -280,14 +280,14 @@
                         </a>
                         <ul class="collapse nav" id="pages">
                             <li>
-                                <a class="active" href="agregarasesor">
+                                {{#link-to "agregarasesor"}}
                                      <i class="glyphicon glyphicon-plus"></i> Agregar asesor
-                                </a>
+                                {{/link-to}}
                              </li>
                              <li>
-                                <a class="active" href="tablaasesores">
+                                {{#link-to "tablaasesores"}}
                                      <i class="fa fa-angle-double-right"></i> Lista de asesores
-                                </a>
+                                {{/link-to}}
                              </li>
                         </ul>
                     </li>
@@ -297,25 +297,25 @@
                         </a>
                         <ul class="collapse nav" id="calendario">
                             <li>
-                                <a class="active" href="agregarevento">
+                                {{#link-to "agregarevento"}}
                                      <i class="glyphicon glyphicon-plus"></i> Agregar evento
-                                </a>
+                                {{/link-to}}
                              </li>
                              <li>
-                                <a class="active" href="calendarioeventos">
+                                {{#link-to "calendarioeventos"}}
                                      <i class="fa fa-angle-double-right"></i> Ver calendario
-                                </a>
+                                {{/link-to}}
                              </li>
                         </ul>
                     </li>
                 </ul>
             </div>
     </nav>
-{{!--     {{/if}} --}}
+    {{/if}}
 
 {{outlet}}
-{{!-- 
-{{#if session.isAuthenticated}} --}}
+
+{{#if session.isAuthenticated}}
 
 <div id="logout" style="display:none">
         <div class="logout-message">
@@ -326,7 +326,7 @@
             <p>Selecciona "Cerrar Sesión" si estas listo.</p>
             <ul class="list-inline">
                 <li>
-                    <a href="loginn" class="btn btn-green">
+                    <a {{action 'logout'}} class="btn btn-green">
                         <strong>Cerrar Sesión</strong>
                     </a>
                 </li>
@@ -336,7 +336,7 @@
             </ul>
         </div>
     </div>
-{{!--     {{/if}} --}}
+    {{/if}}
     <!-- THEME SCRIPTS -->
     <script src="js/flex.js"></script>
     

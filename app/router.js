@@ -22,7 +22,7 @@ Router.map(function() {
   this.route('nutricion');
   this.route('perfil');
   this.route('perfilalumno');
-  this.route('perfilasesor');
+  this.route('perfilasesor', {path: "/asesor/admin_id"});
   this.route('principal');
   this.route('tablaalumnos');
   this.route('tablaasesores');
