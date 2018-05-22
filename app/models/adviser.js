@@ -7,7 +7,7 @@ export default DS.Model.extend({
     apellidos:  DS.attr('string'),
     departamento: DS.attr('string'),
     lider:  DS.attr('string'),
-    telefono: DS.attr('number'),
+    telefono: DS.attr('string'),
     ubicacion:  DS.attr('string'),
     horarioInit:  DS.attr('string', {defaultValue: "9:00 AM"}),
     horarioEnd:  DS.attr('string', {defaultValue: "2:00 PM"}),
